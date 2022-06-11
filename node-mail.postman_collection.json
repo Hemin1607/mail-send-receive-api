@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "aee5bcd8-0952-44d7-91d8-270cb568179f",
+		"name": "node-mail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15203107"
+	},
+	"item": [
+		{
+			"name": "sendmail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sender_email\" : \"********@gmail.com\",\r\n    \"sender_password\" : \"**********\",\r\n    \"receiver_email\" : \"***********@gmail.com\",\r\n    \"message\" : \"hello from postman\",\r\n    \"subject\" : \"test API for EMAIL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/senduseremail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"senduseremail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readEmail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"*******@gmail.com\",\r\n    \"password\" :\"**********\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/getuseremail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getuseremail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
